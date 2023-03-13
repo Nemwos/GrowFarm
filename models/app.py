@@ -17,20 +17,6 @@ from streamlit_lottie import st_lottie
 
 
 
-
-#------------------------- Themes -------------------------#
-
-import streamlit as st
-import configparser
-
-config = configparser.ConfigParser()
-config.read(".streamlit/config.toml")
-
-if "theme" in config:
-    st.set_page_config(**config["theme"])
-    
-    
-
     
 #------------------------- READING FILES and CLASSES -------------------------#
 
@@ -485,7 +471,7 @@ def Crop_Disease_Prediction():
 #------------------------- MAIN FUNCTION -------------------------#
             
 def main():
-    st.set_page_config(page_title="Recommender System", page_icon = ":herb:", layout="wide")
+    st.set_page_config(page_title="Recommender System", page_icon = ":herb:", layout="wide", theme=".streamlit/config.toml")
 
     # sidebar for navigation
     from streamlit_option_menu import option_menu
