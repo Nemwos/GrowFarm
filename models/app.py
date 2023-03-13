@@ -17,6 +17,21 @@ from streamlit_lottie import st_lottie
 
 
 
+
+#------------------------- Themes -------------------------#
+
+import streamlit as st
+import configparser
+
+config = configparser.ConfigParser()
+config.read(".streamlit/config.toml")
+
+if "theme" in config:
+    st.set_page_config(**config["theme"])
+    
+    
+
+    
 #------------------------- READING FILES and CLASSES -------------------------#
 
 fertilizer_df = pd.read_csv('models/data/fertilizer.csv')
