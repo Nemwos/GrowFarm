@@ -278,16 +278,16 @@ def Crop_Recommender():
     
     with col2:
         st.subheader(" Find out the most suitable crop to grow in your farm 👨‍🌾")
-        N = st.number_input("Nitrogen", 1, 10000, placeholder='e.g. 100')
-        P = st.number_input("Phosphorus", 1, 10000, placeholder='e.g. 50')
-        K = st.number_input("Potassium", 1, 10000, placeholder='e.g. 200')
-        temp = st.number_input("Temperature", 0.0, 100000.0, placeholder='e.g. 25.5')
-        humidity = st.number_input("Humidity in %", 0.0, 100000.0, placeholder='e.g. 60')
-        ph = st.number_input("Ph", 0.0, 100000.0, placeholder='e.g. 6.5')
-        rainfall = st.number_input("Rainfall in mm", 0.0, 100000.0, placeholder='e.g. 100')
+            N = st.number_input("Nitrogen", 1, 10000, placeholder='e.g. 100')
+            P = st.number_input("Phosphorus", 1, 10000, placeholder='e.g. 50')
+            K = st.number_input("Potassium", 1, 10000, placeholder='e.g. 200')
+            temp = st.number_input("Temperature", 0.0, 100000.0, placeholder='e.g. 25.5')
+            humidity = st.number_input("Humidity in %", 0.0, 100000.0, placeholder='e.g. 60')
+            ph = st.number_input("Ph", 0.0, 100000.0, placeholder='e.g. 6.5')
+            rainfall = st.number_input("Rainfall in mm", 0.0, 100000.0, placeholder='e.g. 100')
 
         
-        state = st.selectbox("Select State", ["Select State"] + state_arr)
+            state = st.selectbox("Select State", ["Select State"] + state_arr)
 
         
         
