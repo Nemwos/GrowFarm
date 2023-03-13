@@ -471,7 +471,7 @@ def Crop_Disease_Prediction():
 #------------------------- MAIN FUNCTION -------------------------#
             
 def main():
-    st.set_page_config(page_title="Recommender System", page_icon = ":herb:", layout="wide", primaryColor="#a08f33", backgroundColor="#e6e6bb", secondaryBackgroundColor="#96b568", textColor="#000000", font="serif")
+    st.set_page_config(page_title="Recommender System", page_icon = ":herb:", layout="wide")
 
     # sidebar for navigation
     from streamlit_option_menu import option_menu
