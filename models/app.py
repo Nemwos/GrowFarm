@@ -14,7 +14,6 @@ from fertilizer import fertilizer_dic
 from utils.model import ResNet9
 from utils.disease import disease_dic
 from streamlit_lottie import st_lottie
-from cities import arr_cities
 
 
 
@@ -189,7 +188,7 @@ def weather_fetch(city_name):
 def home():
     st.markdown("<h1 style='text-align:center'>Welcome to GrowFarm</h1>", unsafe_allow_html=True)
         
-    image = Image.open('C:/Users/Rakshita Bhole/Desktop/Final_CRS/TY_Project/images/first.png')
+    image = Image.open('images/first.png')
     image = image.resize((800,200))
     st.image(image, use_column_width=True)
     
@@ -287,9 +286,6 @@ def Crop_Recommender():
         rainfall = st.number_input("Rainfall in mm", 0.0, 100000.0)
         
         state = st.selectbox("Select State", ["Select State"] + state_arr)
-        if state != "Select State":
-            cities = arr_cities[state]
-            city = st.selectbox("Select City", ["Select City"] + cities)
 
         
         
@@ -306,7 +302,7 @@ def Crop_Recommender():
 
         pred_df = pd.DataFrame([single_pred])
         if st.button('Predict'):
-            loaded_model = load_model('XGBoost.pkl')
+            loaded_model = load_model('models/RandomForest.pkl')
             prediction = loaded_model.predict(pred_df)
             col1.write('''
         		    ## Results 🔍 
@@ -350,7 +346,7 @@ def Fertilizers_Prediction():
         st.empty()
 
     if st.button("Predict"):
-        st.write("<div style='text-align: center;'><h3><b> Prediction 🔍 </</b></h4>i3v>", unsafe_allow_html=True)
+        st.write("<div style='text-align: center;'><h3><b> Prediction 🔍 </b></h4>", unsafe_allow_html=True)
         prediction = predict_fertilizer(crop_name, N, P, K)
         st.markdown("<div style='text-align: center;'><p>" + prediction + "</p></div>", unsafe_allow_html=True)            
 
