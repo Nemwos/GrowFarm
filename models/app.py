@@ -431,7 +431,7 @@ transform = transforms.Compose([
 
 #------------------------- PLANT DISEASE PREDICTION PAGE -------------------------#
 
-def Crop_Disease_Prediction():
+def Plant_Disease_Prediction():
     st.title("Crop Disease Prediction")
 
     file_up = st.file_uploader("Upload a Photo",type=['png','jpg','jpeg'])
