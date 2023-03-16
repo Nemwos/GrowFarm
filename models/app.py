@@ -432,7 +432,7 @@ transform = transforms.Compose([
 #------------------------- PLANT DISEASE PREDICTION PAGE -------------------------#
 
 def Plant_Disease_Prediction():
-    st.title("Crop Disease Prediction")
+    st.title("Plant Disease Prediction")
 
     file_up = st.file_uploader("Upload a Photo",type=['png','jpg','jpeg'])
     if file_up is None:    
@@ -494,7 +494,7 @@ def main():
     if (selected == 'Fertilizer Prediction'):
         Fertilizers_Prediction()
     if (selected == "Plant Disease Prediction"):
-        Crop_Disease_Prediction()
+        Plant_Disease_Prediction()
 
 if __name__=="__main__":
     main()
